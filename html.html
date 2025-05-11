@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./fonts/css/all.min.css" >
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="html.html">Hoa Chu <span></span></a></div>
+
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="search" placeholder="Tìm kiếm sản phẩm...">
+    </div>
+
+    <div class="right-menu">
+      <div class="localitem">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+             width="1em" height="1em"
+             fill="red" stroke="white" stroke-width="1.2"
+             stroke-linejoin="round"
+             style="font-size: 24px; margin-right: 6px;">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+       <a href="giaohang.html"><span class="text-bold">Giao Hàng</span></a>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-shopping-cart"></i>
+
+       <a href="giohang.html"> <span id="cart-count">Giỏ hàng</span> </a>
+      </div>
+      <div class="menu-item">
+        <a href="login.html">
+        <i class="fa-regular fa-circle-user"></i>
+       <span>Hội viên</span>
+      </a>
+      </div>
+    </div>
+  </header>
+  <div class="topbar">
+    <div class="topbar-left dropdown">
+      <i class="fas fa-bars menu-icon"></i>
+      <span class="dropdown-toggle">Danh mục sản phẩm</span>
+      <ul class="dropdown-menu">
+        <li><a href="./sp2.html">Rau củ quả</a></li>
+        <li><a href="./sp1.html">Thịt & Hải sản</a></li>
+        <li><a href="./sp3.html">Đồ uống</a></li>
+        <li><a href="./sp4.html">Đồ gia dụng</a></li>
+      </ul>
+    </div>
+  
+    <div class="topbar-right">
+      <div class="topbar-item">
+        <a href="./tintuc.html">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Tin tức HOACHU</span>
+
+        </a>
+      </div>
+      <div class="topbar-item dropdown">
+        <i class="fa-solid fa-phone"></i>
+        <span class="dropdown-toggle">Tư vấn mua hàng</span>
+        <ul class="dropdown-menu">
+          <li><a href="#online">Mua hàng online: xxxxxxxxx</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="slideshow-container">
+    <!-- Các slide ảnh -->
+     
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./img/nacgionheo.jpg" class="anhdautrang" >
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./img/baroiheo.jpg"  class="anhdautrang">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./img/dautrang3.jpg" class="anhdautrang">
+      </div>
+  
+    <!-- Nút điều hướng và dots -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Container dots (đặt trong slideshow-container) -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+ 
+    
+ <script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+  <div class="container1">
+    <div class="listsanpham">
+      <p1 class="sp">Sản phẩm nội bật</p1>
+      <div class="raucuqua">
+        <p2 class="ten">
+          Rau củ quả 
+        </p2>
+       <div class="sanpham_grid">
+
+         <div class="product-card">
+       
+           <img src="./img/rau2.jpg" alt="Sản phẩm 1" class="logo_product  ">
+           <p class="product-name t3c">Củ cải đường  </p>
+           <p class="unit">ĐVT: 300gr </p>
+           <p class="price">
+           <span class="current-price">25.600 đ</span>
+           <span class="old-price">33.500 đ</span>
+            </p>
+            <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+       
+              <img src="./img/rau4.jpg" alt="Sản phẩm 1" class="logo_product  ">
+              <p class="product-name t3c">Rau ngò tươi </p>
+              <p class="unit">ĐVT: 300gr </p>
+              <p class="price">
+              <span class="current-price">25.600 đ</span>
+              <span class="old-price">33.500 đ</span>
+               </p>
+               <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+               </div>
+       
+       <div class="product-card">
+       
+         <img src="./img/rau1.jpg" alt="Sản phẩm 1" class="logo_product   ">
+         <p class="product-name t4c">Khoai mỡ organic </p>
+         <p class="unit">ĐVT: 300gr </p>
+         <p class="price">
+         <span class="current-price">30.600 đ</span>
+         <span class="old-price">43.500 đ</span>
+          </p>
+          <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+          </div>
+     
+       <div class="product-card">
+       
+         <img src="./img/rau3.jpg" alt="Sản phẩm 1" class="logo_product   ">
+         <p class="product-name t3c">Giá sạch ủ cát </p>
+          <p class="unit">ĐVT: 300gr </p>
+         <p class="price">
+          <span class="current-price">21.000 đ</span>
+          <span class="old-price">33.500 đ</span>
+        </p>
+        <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+        </div>
+        
+       </div>
+    </div> 
+    <div class="raucuqua">
+      <p2 class="ten">
+        Thịt & Hải sản
+      </p2>
+      <div class="sanpham_grid">
+
+        <div class="product-card">
+      
+          <img src="./img/thit1.jpg" alt="Sản phẩm 1" class="logo_product ">
+          <p class="product-name">Sườn heo non nhập khẩu từ Đức</p>
+          <p class="unit">ĐVT: 1kg</p>
+          <p class="price">
+          <span class="current-price">99.000 đ</span>
+          <span class="old-price">150.000 đ</span>
+           </p>
+           <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+           </div>
+           <div class="product-card">
+       
+            <img src="./img/thit4.jpg" alt="Sản phẩm 1" class="logo_product  ">
+            <p class="product-name t3c">Thịt bò tươi  </p>
+            <p class="unit">ĐVT: 300gr </p>
+            <p class="price">
+            <span class="current-price">25.600 đ</span>
+            <span class="old-price">33.500 đ</span>
+             </p>
+             <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+             </div> 
+      
+      <div class="product-card">
+      
+        <img src="./img/thit2.jpg" alt="Sản phẩm 1" class="logo_product  ">
+        <p class="product-name t3c">Chân giò trước</p>
+        <p class="unit">ĐVT: 500gr</p>
+        <p class="price">
+        <span class="current-price">50.000 đ</span>
+        <span class="old-price">63.500 đ</span>
+         </p>
+         <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+         </div>
+    
+      <div class="product-card">
+      
+        <img src="./img/thit3.jpg" alt="Sản phẩm 1" class="logo_product ">
+        <p class="product-name tc">Móng giò heo Ace Foods</p>
+         <p class="unit">ĐVT: 500gr</p>
+        <p class="price">
+         <span class="current-price"> 45.600 đ</span>
+         <span class="old-price">53.500 đ</span>
+       </p>
+       <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+       </div>
+      </div>
+       
+  </div> 
+  <div class="raucuqua">
+    <p2 class="ten">
+      Đồ uống 
+    </p2>
+    <div class="sanpham_grid">
+
+      <div class="product-card">
+    
+        <img src="./img/sua1.jpg" alt="Sản phẩm 1" class="logo_product ">
+        <p class="product-name">Lốc 4 hộp sữa tươi tiệt trùng Nutimilk 100ml</p>
+        <p class="unit">ĐVT: Gói 4</p>
+        <p class="price">
+        <span class="current-price">25.600 đ</span>
+        <span class="old-price">33.500 đ</span>
+         </p>
+         <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+         </div>
+         <div class="product-card">
+       
+          <img src="./img/douong4.jpg" alt="Sản phẩm 1" class="logo_product  ">
+          <p class="product-name t3c">Coca-cola  </p>
+          <p class="unit">ĐVT:  1 lon </p>
+          <p class="price">
+          <span class="current-price">25.600 đ</span>
+          <span class="old-price">33.500 đ</span>
+           </p>
+           <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+           </div>
+    <div class="product-card">
+    
+      <img src="./img/sua2,jpg.jpg" alt="Sản phẩm 1" class="logo_product  ">
+      <p class="product-name t3c">Cà phê hòa tan</p>
+      <p class="unit">ĐVT: Gói 4</p>
+      <p class="price">
+      <span class="current-price">55.600 đ</span>
+      <span class="old-price">63.500 đ</span>
+       </p>
+       <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+       </div>
+  
+    <div class="product-card">
+    
+      <img src="./img/sua3.jpg" alt="Sản phẩm 1" class="logo_product ">
+      <p class="product-name">Lốc 4 hộp sữa tươi tiệt trùng vinamilk 100ml</p>
+       <p class="unit">ĐVT: Gói 4</p>
+      <p class="price">
+       <span class="current-price">15.600 đ</span>
+       <span class="old-price">23.500 đ</span>
+     </p>
+     <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+     </div>
+     
+    </div>
+</div> 
+<div class="raucuqua">
+  <p2 class="ten">
+    Đồ gia dụng   </p2>
+    <div class="sanpham_grid">
+
+      <div class="product-card">
+    
+        <img src="./img/dgd1.jpg" alt="Sản phẩm 1" class="logo_product ">
+        <p class="product-name">Nồi chiên không dầu KALITE Q10 10 lít, trục xiên quay</p>
+        <p class="unit">ĐVT: 1 chiếc</p>
+        <p class="price">
+        <span class="current-price">2.225.600 đ</span>
+        <span class="old-price">3.333.500 đ</span>
+         </p>
+         <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+         </div>
+    
+    <div class="product-card">
+    
+      <img src="./img/dgd2.jpg" alt="Sản phẩm 1" class="logo_product ">
+      <p class="product-name">Máy làm sữa hạt KALITE KL990P xay nhuyễn</p>
+      <p class="unit">ĐVT: 1 chiếc</p>
+      <p class="price">
+      <span class="current-price">3.425.600 đ</span>
+      <span class="old-price">4.333.500 đ</span>
+       </p>
+       <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+       </div>
+   <div class="product-card">
+       
+              <img src="./img/dgd4.jpg" alt="Sản phẩm 1" class="logo_product  ">
+              <p class="product-name ">CHẢO SÂU LÒNG SMEG  𝐂𝐊𝐅𝐖𝟑𝟎𝟎𝟏𝐑𝐃𝐌 30CM   </p>
+              <p class="unit">ĐVT: 300gr </p>
+              <p class="price">
+              <span class="current-price">1.225.600 đ</span>
+              <span class="old-price">2.233.500 đ</span>
+               </p>
+               <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+               </div>
+    <div class="product-card">
+    
+      <img src="./img/dgd3.jpg" alt="Sản phẩm 1" class="logo_product ">
+      <p class="product-name">Máy ép chậm KALITE KL-530 nhỏ gọn, kiệt bã</p>
+       <p class="unit">ĐVT: 1 chiếc</p>
+      <p class="price">
+       <span class="current-price">1.225.600 đ</span>
+       <span class="old-price">2.333.500 đ</span>
+     </p>
+     <button class="add-to-cart">🛒 Thêm vào giỏ</button>
+     </div>
+     
+    </div>
+</div> 
+      
+    </div>
+
+    <div class="footer-content">   
+        <ul class="socials"> 
+            <p class="header-footer">Về chúng tôi</p> 
+            <li><a href="./gioithieu.html" class="footer-noidung">Giới thiệu về Hoa Chu</a></li> 
+            <li><a href="https://www.facebook.com/" class="footer-noidung">Facebook</a></li>  
+            <li><a href="https://x.com/?lang=vi" class="footer-noidung">Twitter</a></li>  
+            <li><a href="https://www.instagram.com/" class="footer-noidung">Instagram</a></li>  
+          </ul> 
+          <ul class="clients-support"> 
+            <p class="header-footer">Hỗ trợ khách hàng</p> 
+            <li><a href="#" class="footer-noidung">Hỗ trợ khách hàng</a></li> 
+
+      </ul> 
+    </ul> 
+    <ul class="clients-support"> 
+      <p class="header-footer">Tư vấn khách hàng</p> 
+      <li><a href="#" class="footer-noidung">Tư vấn khách hàng</a></li> 
+
+</ul> 
+    </div>  
+  </div>
+ 
+
+    <script src="spcrit.js"></script>
+
+  
+</body>
+</html>

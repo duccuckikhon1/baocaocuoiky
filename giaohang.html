@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin giao hàng</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .delivery-wrapper {
+      background: white;
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      overflow: hidden;
+    }
+
+    .left-side, .right-side {
+      padding: 30px;
+      flex: 1;
+    }
+
+    .left-side {
+      background-color: #fff;
+      border-right: 1px solid #eee;
+    }
+
+    .right-side {
+      background-color: #f8f8f8;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form p {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #ff6b6b;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="delivery-wrapper">
+  <div class="left-side">
+    <h2>Thông tin người nhận</h2>
+    <form>
+      <p>
+        <label for="name">Họ và Tên:</label>
+        <input type="text" id="name" name="name" required>
+      </p>
+      <p>
+        <label for="phone">Số điện thoại:</label>
+        <input type="text" id="phone" name="phone" required>
+      </p>
+      <p>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address" required>
+      </p>
+    </form>
+  </div>
+
+  <div class="right-side">
+    <h2>Ghi chú đơn hàng</h2>
+    <form>
+      <p>
+        <textarea id="note" name="note" placeholder="Nhập ghi chú nếu có..."></textarea>
+      </p>
+      <button type="submit">Đặt hàng ngay</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

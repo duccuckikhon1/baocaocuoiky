@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    <div class="login-container">
+        <h1>Đăng nhập</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Tên đăng nhập">
+                <span class="error-message" id="usernameError">Vui lòng nhập tên đăng nhập</span>
+
+            </div>
+            
+            <div class="form-group">
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <button type="button" class="toggle-password" onclick="togglePassword()" title="Hiện/Ẩn mật khẩu">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+                </div>
+                <span class="error-message" id="passwordError">Vui lòng nhập mật khẩu</span>
+
+            </div>
+            
+            <button type="submit">Đăng nhập</button>
+            
+            <div class="links">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+            
+            <div class="signup-link">
+                <span>Chưa có tài khoản? </span>
+                <a href="register.html">Đăng ký ngay</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const toggleIcon = document.querySelector('.toggle-password i');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.classList.replace('fa-eye-slash', 'fa-eye');
+        toggleIcon.style.color = '#1877f2';
+    } else {
+        passwordInput.type = 'password';
+        toggleIcon.classList.replace('fa-eye', 'fa-eye-slash');
+        toggleIcon.style.color = '#666';
+    }
+}
+
+document.getElementById('password').addEventListener('input', function() {
+    this.classList.remove('input-error');
+    document.getElementById('passwordError').classList.remove('show-error');
+
+    const toggleButton = document.querySelector('.toggle-password');
+    if (this.value.length > 0) {
+        toggleButton.style.display = 'block';
+    } else {
+        toggleButton.style.display = 'none';
+    }
+});
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+
+        const username = document.getElementById('username');
+        const usernameError = document.getElementById('usernameError');
+        if (username.value.trim() === '') {
+            username.classList.add('input-error');
+            usernameError.textContent = "Tên đăng nhập không được để trống!";
+            usernameError.classList.add('show-error');
+            isValid = false;
+        } else {
+            username.classList.remove('input-error');
+            usernameError.classList.remove('show-error');
+        }
+
+        const password = document.getElementById('password');
+        const passwordError = document.getElementById('passwordError');
+        if (password.value.trim() === '') {
+            password.classList.add('input-error');
+            passwordError.textContent = "Mật khẩu không được để trống!";
+            passwordError.classList.add('show-error');
+            isValid = false;
+        } else {
+            password.classList.remove('input-error');
+            passwordError.classList.remove('show-error');
+        }
+
+        if (isValid) {
+            alert('Đăng nhập thành công!');
+            this.reset();
+        }
+    });
+
+    document.getElementById('username').addEventListener('input', function() {
+        this.classList.remove('input-error');
+        document.getElementById('usernameError').classList.remove('show-error');
+    });
+
+    document.getElementById('password').addEventListener('input', function() {
+        this.classList.remove('input-error');
+        document.getElementById('passwordError').classList.remove('show-error');
+    });
+        
+    </script>
+</body>
+</html>

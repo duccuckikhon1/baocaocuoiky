@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./fonts/css/all.min.css" >
+    <style>
+     
+      .container2 { max-width: 1100px; margin: 30px auto; padding: 20px; }
+  
+      /* layout chung cho mỗi sản phẩm */
+      .product2 { margin-bottom: 40px; background: white; border-radius: 10px; overflow: hidden; }
+  
+      /* layout 1: TH True Milk */
+      .layout-1 { display: flex; border: 2px solid #4caf50; }
+      .layout-1 img { width: 300px; object-fit: cover; }
+      .layout-1 .info { padding: 20px; }
+  
+      /* layout 2: Ensure Gold */
+      .layout-2 { text-align: center; padding: 20px; background: #fff3e0; }
+      .layout-2 img { width: 200px; border-radius: 50%; }
+      .layout-2 h2 { margin-top: 10px; }
+      .layout-2 p { margin: 5px 0; }
+  
+      /* layout 3: Ngôi Sao Phương Nam */
+      .layout-3 { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; padding: 20px; }
+      .layout-3 img { width: 100%; border-radius: 8px; }
+      .layout-3 .info { background: #e0f7fa; padding: 15px; border-radius: 8px; }
+  
+      /* layout 4: Vinamilk Probi */
+      .layout-4 { padding: 20px; background: #fce4ec;display :flex;flex-wrap: wrap ;justify-content: start; }
+      .layout-4 img { width: 25%; height: 300px; border-radius: 8px; }
+      .layout-4 h2 { text-align: center; margin: 10px 0;margin-bottom: 0px;height: 20px; }
+      .layout-4 .desc { text-align: justify; }
+  
+      /* giá tiền */
+      .price { color: #e53935; font-weight: bold; margin-top: 10px; display: block; }
+      
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="html.html">Hoa Chu </a></div>
+    
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="search" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+    
+        <div class="right-menu">
+          <div class="localitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                 width="1em" height="1em"
+                 fill="red" stroke="white" stroke-width="1.2"
+                 stroke-linejoin="round"
+                 style="font-size: 24px; margin-right: 6px;">
+              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94"/>
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            <a href="giaohang.html"><span class="text-bold">Giao Hàng</span></a>
+          </div>
+          <div class="menu-item">
+            <i class="fas fa-shopping-cart"></i>
+    
+            <a href="giohang.html"> <span id="cart-count">Giỏ hàng</span> </a>
+          </div>
+          <div class="menu-item">
+            <a href="login.html">
+            <i class="fa-regular fa-circle-user"></i>
+           <span>Hội viên</span>
+          </a>
+          </div>
+        </div>
+      </header>
+      <div class="topbar">
+        <div class="topbar-left dropdown">
+          <i class="fas fa-bars menu-icon"></i>
+          <span class="dropdown-toggle">Danh mục sản phẩm</span>
+          <ul class="dropdown-menu">
+            <li><a href="./sp2.html">Rau củ quả</a></li>
+            <li><a href="./sp1.html">Thịt & Hải sản</a></li>
+            <li><a href="./sp3.html">Đồ uống</a></li>
+            <li><a href="./sp4.html">Đồ gia dụng</a></li>
+          </ul>
+        </div>
+      
+        <div class="topbar-right">
+          <div class="topbar-item">
+            <a href="tintuc.html"> <i class="fa-regular fa-envelope"></i>
+              <span>Tin tức Hoa Chu</span></a> 
+          </div>
+          <div class="topbar-item dropdown">
+            <i class="fa-solid fa-phone"></i>
+    
+            <span class="dropdown-toggle">Tư vấn mua hàng</span>
+            <ul class="dropdown-menu">
+              <li><a href="#online">Mua hàng online: xxxxxxxxx</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+
+        <!-- Sản phẩm 1: TH True Milk -->
+        <div class="product2 layout-1">
+          <img src="./img/spdouong1.jpg" alt="TH True Milk">
+          <div class="info">
+            <h2>TH True Milk</h2>
+            <p><strong>Thành phần:</strong> 100% sữa tươi nguyên chất.</p>
+            <p><strong>Công dụng:</strong> Cung cấp canxi, vitamin cho cơ thể.</p>
+            <p><strong>Xuất xứ:</strong> Việt Nam</p>
+            <span class="price">30.000đ/lốc 4 hộp</span>
+          </div>
+        </div>
+      
+        <!-- Sản phẩm 2: Ensure Gold -->
+        <div class="product2 layout-2">
+          <img src="./img/spdouong2.jpg" alt="Ensure Gold">
+          <h2>Ensure Gold</h2>
+          <p><strong>Thành phần:</strong> Đạm, vitamin, khoáng chất.</p>
+          <p><strong>Công dụng:</strong> Bổ sung dinh dưỡng cho người lớn tuổi.</p>
+          <p><strong>Xuất xứ:</strong> Hoa Kỳ</p>
+          <span class="price">820.000đ/hộp 850g</span>
+        </div>
+      
+        <!-- Sản phẩm 3: Ngôi Sao Phương Nam -->
+        <div class="product2 layout-3">
+          <img src="./img/spdouong3.jpg" alt="Ngôi Sao Phương Nam">
+          <div class="info">
+            <h2>Ngôi Sao Phương Nam</h2>
+            <p><strong>Thành phần:</strong> Sữa, đường, dầu thực vật.</p>
+            <p><strong>Công dụng:</strong> Dùng pha cà phê, làm bánh, nấu ăn.</p>
+            <p><strong>Xuất xứ:</strong> Việt Nam</p>
+            <span class="price">22.000đ/lon 380g</span>
+          </div>
+        </div>
+      
+        <!-- Sản phẩm 4: Vinamilk Probi -->
+        <div class="product2 layout-4">
+          <img src="./img/spdouong4.jpg" alt="Vinamilk Proby" class="imagesp">
+          <div class="info_product">
+
+            <h2>Vinamilk Probi</h2>
+            <div class="desc">
+              <p><strong>Thành phần:</strong> Men probiotic, sữa tươi, đường.</p>
+              <p><strong>Công dụng:</strong> Hỗ trợ hệ tiêu hóa, tăng đề kháng.</p>
+              <p><strong>Xuất xứ:</strong> Việt Nam</p>
+              <span class="price">50.000đ/lốc 6 chai</span>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <div class="footer-content">   
+        <ul class="socials"> 
+            <p class="header-footer">Về chúng tôi</p> 
+            <li><a href="./gioithieu.html" class="footer-noidung">Giới thiệu về Hoa Chu</a></li> 
+            <li><a href="https://www.facebook.com/" class="footer-noidung">Facebook</a></li>  
+            <li><a href="https://x.com/?lang=vi" class="footer-noidung">Twitter</a></li>  
+            <li><a href="https://www.instagram.com/" class="footer-noidung">Instagram</a></li>  
+          </ul> 
+          <ul class="clients-support"> 
+            <p class="header-footer">Hỗ trợ khách hàng</p> 
+            <li><a href="#" class="footer-noidung">Hỗ trợ khách hàng</a></li> 
+    
+      </ul> 
+      <ul class="clients-support"> 
+        <p class="header-footer">Tư vấn khách hàng</p> 
+        <li><a href="#" class="footer-noidung">Tư vấn khách hàng</a></li> 
+    
+    </ul>
+    </div>  
+</body>
+<script src="spcrit.js"> </script>
+
+</html>
